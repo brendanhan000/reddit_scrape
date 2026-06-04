@@ -1,0 +1,108 @@
+# ---------------------------------------------------------------------------
+# Slang / stopword blocklist for the ticker extractor.
+#
+# These tokens ARE (in many cases) real, valid US-listed tickers, but on
+# r/wallstreetbets they are almost always used as slang/acronyms rather than
+# as a reference to the stock. Bare (non-$) matches of these tokens are
+# dropped.
+#
+# IMPORTANT: A "$"-prefixed mention ALWAYS bypasses this list. If someone
+# writes "$DD" they mean DuPont; "$ALL" means Allstate; "$GO" means Grocery
+# Outlet. Only the bare, unprefixed token is suppressed here.
+#
+# Format: one token per line, case-insensitive. Blank lines and lines
+# starting with "#" are ignored. Edit freely to tune precision/recall.
+# ---------------------------------------------------------------------------
+
+# --- Explicitly requested defaults ---
+DD
+CEO
+FD
+YOLO
+IMO
+ATH
+EOD
+IT
+ALL
+GO
+AI
+USA
+
+# --- Corporate / finance acronyms (often valid tickers) ---
+CFO
+CTO
+COO
+IPO
+ROI
+ROE
+EPS
+PE
+PT
+EV
+ETF
+ESG
+GDP
+CPI
+PPI
+TTM
+YOY
+QOQ
+FY
+ER
+PR
+RNG
+ATM
+OTM
+ITM
+DCA
+FOMO
+FUD
+TLDR
+
+# --- WSB / trading slang ---
+WSB
+HODL
+FOMC
+FED
+SEC
+IRS
+GUH
+RIP
+ATL
+EOW
+EOY
+BTFD
+BTW
+
+# --- Common English words / chat-speak that are also tickers ---
+A
+ANY
+ARE
+BE
+BIG
+BUY
+CAN
+FOR
+GOOD
+HE
+NOW
+ON
+OR
+OUT
+SO
+TWO
+UP
+US
+WE
+YOU
+LOL
+LMAO
+WTF
+OMG
+IDK
+TBH
+FYI
+IMHO
+AKA
+OK
+NO
