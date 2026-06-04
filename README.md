@@ -12,7 +12,7 @@ or upserted into MySQL for scheduled, accumulating history.
 
 ## 1. Requirements
 
-- **Python 3.11+**
+- **Python 3.9+** (developed against the 3.11+ target; verified to run on 3.9)
 - A Reddit account + a "script" OAuth app (free; steps below)
 - (Optional) A MySQL 8 server if you use `--mysql`
 
@@ -22,8 +22,9 @@ or upserted into MySQL for scheduled, accumulating history.
 git clone <your-repo-url> reddit_scrape
 cd reddit_scrape
 
-python3.11 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
+pip install -U pip                        # editable install needs pip >= 21.3 (PEP 660)
 
 pip install -r requirements.txt          # runtime only
 # or, editable install with the console script + dev/test extras:
